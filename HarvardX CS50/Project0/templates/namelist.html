@@ -8,9 +8,8 @@
     <title>My Website!</title>
 </head>
 <body>
-    <h1>Let's test!</h1>
-    <ul>
-        {{ headline }}
-    </ul>
+    {% for name in names %}
+        <h1> {{ name }} </h1>
+    {% endfor %}
 </body>
 </html>

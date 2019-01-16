@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Hi, This is page1!
+{% endblock %}
+
+{% block body %}
+    <p>
+        Chapter 1 of CLRS
+    </p>
+    
+    <a href="{{ url_for('page2') }}">Click here to see more</a>
+{% endblock %}
+
+
