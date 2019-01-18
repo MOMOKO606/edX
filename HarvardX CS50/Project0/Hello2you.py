@@ -9,8 +9,8 @@ from flask import Flask
 #  创建实例
 app = Flask(__name__)
 
-#  route() 装饰器告诉Flask什么样的URL能触发我们的函数
-#  route 装饰器创建了从网址/到这个函数的映射
+#  route装饰器告诉Flask什么样的URL能触发我们的函数
+#  route装饰器创建了从网址/到这个函数的映射
 @app.route("/")
 def index():
     return "Hello,world!"
