@@ -22,7 +22,7 @@ def bye():
 @app.route("/newyear")
 def isnewyear():
     now = datetime.datetime.now()
-    new_year = now.month == 1 and now.day == 1
+    new_year = (now.month == 1 and now.day == 1)
     return render_template("NewYear.html", new_year = new_year)
 
 @app.route("/namelist")

@@ -19,14 +19,6 @@ def main():
                   {'origin':origin,'destination':destination,'duration':duration})
         print( f"Added flight from {origin} to {destination} lasting {duration} mintues")
     db.commit()
-
-
-    
-# =============================================================================
-#     flights = db.execute("SELECT origin, destination, duration FROM flights").fetchall()
-#     for flight in flights:
-#         print(f"{flight.origin} to {flight.destination},{flight.duration} minutes.")
-# =============================================================================
         
 if __name__ == "__main__":
     main()
