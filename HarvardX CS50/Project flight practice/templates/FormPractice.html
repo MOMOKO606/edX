@@ -1,0 +1,23 @@
+{% extends "S_layout.html" %}
+
+{% block heading %}
+
+    <p>This is a form practice!</p>
+    <p>Display the string list</p>
+    
+
+    
+{% endblock %}
+
+{% block body %}
+    {% for str in strlist %}
+        <p> {{str}} </p>
+    {% endfor %}
+    <form action="{{url_for('form')}}" method="post">
+        <div>随便输点什么吧:
+            <input type="text" name="name" >
+            <input type="submit" value="提交">
+        </div>
+    </form>
+{% endblock %}
+

@@ -1,0 +1,30 @@
+{% extends "F_layout.html" %}
+
+{% block body %}
+    <form action="{{ url_for('book')}}" method="post">
+        <table border="1">
+            <tr>
+                <th>flight</th><th>book</th>
+            </tr>
+            {% for flight in flights %}
+                <!-- 赋值 -->
+                {%  set flight_id = flight.id %}
+                <tr>
+                    <td>
+                        <a href="{{ url_for('detail',flight_id = flight.id )}}">
+                            {{ flight.origin }} to {{ flight.destination }}
+                        </a>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" name="flight_id" value={{ flight_id }}>Select!</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <div class="form-group">
+            <input class="form-control" name="name" placeholder="Passenger Name">
+        </div>
+    </form>
+
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "S_layout.html" %}
+
+{% block heading %}
+    This is page2!
+{% endblock %}
+
+{% block body %}
+    <p>Chapter 2 of CLRS</p>
+    <a href = "{{url_for('p1')}}">Click here to return to page1 </a>
+{% endblock %}
