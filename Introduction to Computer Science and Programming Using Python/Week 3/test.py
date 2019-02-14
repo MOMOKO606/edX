@@ -4,13 +4,9 @@ Created on Fri Jul 13 22:09:48 2018
 
 @author: bianl
 """
-testList = [1, -4, 8, -9]
+animals = {'a': 'aardvark', 'b': 'baboon', 'c': 'coati'}
 
-def applyToEach(L, f):
-    for i in range(len(L)):
-        L[i] = f(L[i])
+animals['d'] = 'donkey'
 
-def power(x):
-    return x*x
-
-applyToEach(testList, power)
+if __name__ == "__main__":
+    print(animals.values())

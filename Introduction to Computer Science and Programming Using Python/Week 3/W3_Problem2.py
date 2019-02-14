@@ -17,7 +17,7 @@ def getGuessedWord(secretWord, lettersGuessed):
         if secretWord[i] in lettersGuessed:
             res.append(secretWord[i])
         else:
-            res.append('-')
+            res.append('_')
     return(''.join(res))
         
     
